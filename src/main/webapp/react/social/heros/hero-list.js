@@ -2,10 +2,10 @@ import heroService from "./hero-service"
 
 const {useState, useEffect} = React;
 
-const {Link, useHistory} = window.ReactRouterDOM;
+const {Link} = window.ReactRouterDOM;
 
 const HeroList = () => {
-  const history = useHistory()
+  //const history = useHistory()
   const [heros, setHeros] = useState([])
   useEffect(() => {
     findAllHeros()
