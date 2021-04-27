@@ -1,7 +1,7 @@
-import CourseList from "./courses/course-list";
-import SectionList from "./sections/section-list";
-import CourseEditorForm from "./courses/course-editor-form";
-import SectionEditorForm from "./sections/section-editor-form";
+import CourseList from "./quirks/course-list";
+import SectionList from "./quotes/section-list";
+import CourseEditorForm from "./quirks/course-editor-form";
+import SectionEditorForm from "./quotes/section-editor-form";
 
 const {HashRouter, Link, Route} = window.ReactRouterDOM;
  

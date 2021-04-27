@@ -1,4 +1,4 @@
-import Users from "./users";
+import Heros from "./heros";
 
 const {HashRouter, Route} = window.ReactRouterDOM;
 
@@ -7,7 +7,7 @@ const App = () => {
         <div>
             <HashRouter>
                 <Route path="/" exact={true}>
-                    <Users/>
+                    <Heros/>
                 </Route>
             </HashRouter>
         </div>

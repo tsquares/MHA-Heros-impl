@@ -1,20 +1,45 @@
 // TODO: declare URL where server listens for HTTP requests
-const USERS_URL = ""
+const HEROS_URL = "http://localhost:8080/api/heros"
 
-// TODO: retrieve all users from the server
-export const findAllUsers = () => {}
+// TODO: retrieve all heros from the server
+export const findAllHeros = () =>
+    fetch(HEROS_URL)
+    .then(response => response.json())
 
-// TODO: retrieve a single user by their ID
-export const findUserById = (id) => {}
+// TODO: retrieve a single hero by their ID
+export const findHeroById = (id) =>
+    fetch(`${HEROS_URL}/${id}`)
+    .then(response => response.json())
 
-// TODO: delete a user by their ID
-export const deleteUser = () => {}
+// TODO: delete a hero by their ID
+export const deleteHero = (id) =>
+    fetch(`${HEROS_URL}/${id}`, {
+      method: "DELETE"
+    })
 
-// TODO: create a new user
-export const createUser = (user) => {}
+// TODO: create a new hero
+export const createHero = (hero) =>
+    fetch(HEROS_URL, {
+      method: 'POST',
+      body: JSON.stringify(hero),
+      headers: {'content-type': 'application/json'}
+    })
+    .then(response => response.json())
 
-// TODO: update a user by their ID
-export const updateUser = (id, user) => {}
+// TODO: update a hero by their ID
+export const updateHero = (id, hero) =>
+    fetch(`${HEROS_URL}/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(hero),
+      headers: {'content-type': 'application/json'}
+    })
+    .then(response => response.json())
 
 // TODO: export all functions as the API to this service
-export default {}
+export default {
+  findAllHeros,
+  findHeroById,
+  deleteHero,
+  createHero,
+  updateHero
+}
