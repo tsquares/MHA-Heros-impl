@@ -10,8 +10,8 @@ public class SuperMove {
   private Integer id;
   private String name;
   private String description;
-  private String range;
-  private String usage;
+  private String effectArea;
+  private String primaryUse;
   private Integer heroId;
   private Integer quirkId;
   
@@ -39,16 +39,16 @@ public class SuperMove {
     this.description = description;
   }
   
-  public String getRange() { return range; }
+  public String getEffectArea() { return effectArea; }
   
-  public void setRange(String range) { this.range = range; }
+  public void setEffectArea(String effectArea) { this.effectArea = effectArea; }
   
-  public String getUsage() {
-    return usage;
+  public String getPrimaryUse() {
+    return primaryUse;
   }
   
-  public void setUsage(String usage) {
-    this.usage = usage;
+  public void setPrimaryUse(String primaryUse) {
+    this.primaryUse = primaryUse;
   }
   
   public Integer getHeroId() { return heroId; }

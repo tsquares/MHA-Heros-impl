@@ -19,37 +19,37 @@ public class SuperMoveOrmDao {
   @Autowired
   SuperMoveRepository superMoveRepository;
   
-  @PostMapping("/api/super_moves")
+  @PostMapping("/api/superMoves")
   public SuperMove createSuperMove(@RequestBody SuperMove superMove) {
     return superMoveRepository.save(superMove);
   }
   
-  @GetMapping("/api/super_moves")
+  @GetMapping("/api/superMoves")
   public List<SuperMove> findAllSuperMoves() {
     return (List<SuperMove>) superMoveRepository.findAll();
   }
   
-  @GetMapping("/api/super_moves/{superMoveId}")
+  @GetMapping("/api/superMoves/{superMoveId}")
   public SuperMove findSuperMoveById(
       @PathVariable("superMoveId") Integer id) {
     return superMoveRepository.findById(id).get();
   }
   
-  @PutMapping("/api/super_moves/{superMoveId}")
+  @PutMapping("/api/superMoves/{superMoveId}")
   public SuperMove updateSuperMove(
       @PathVariable("superMoveId") Integer id,
       @RequestBody SuperMove superMoveUpdates) {
     SuperMove superMove = this.findSuperMoveById(id);
     superMove.setName(superMoveUpdates.getName());
     superMove.setDescription(superMoveUpdates.getDescription());
-    superMove.setRange(superMoveUpdates.getRange());
-    superMove.setUsage(superMoveUpdates.getUsage());
+    superMove.setEffectArea(superMoveUpdates.getEffectArea());
+    superMove.setPrimaryUse(superMoveUpdates.getPrimaryUse());
     superMove.setHeroId(superMoveUpdates.getHeroId());
     superMove.setQuirkId(superMoveUpdates.getQuirkId());
     return superMoveRepository.save(superMove);
   }
   
-  @DeleteMapping("/api/super_moves/{superMoveId}")
+  @DeleteMapping("/api/superMoves/{superMoveId}")
   public void deleteSuperMove(
       @PathVariable("superMoveId") Integer id) {
     superMoveRepository.deleteById(id);

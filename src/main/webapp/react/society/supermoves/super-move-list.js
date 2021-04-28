@@ -16,14 +16,14 @@ const SuperMoveList = () => {
       <div>
         <h2>Super Move List</h2>
         <button className="btn btn-primary"
-                onClick={() => history.push("/super_moves/new")}>
+                onClick={() => history.push("/superMoves/new")}>
           Add Super Move
         </button>
         <ul>
           {
             superMoves.map(superMove =>
                 <li key={superMove.id}>
-                  <Link to={`/super_moves/${superMove.id}`}>
+                  <Link to={`/superMoves/${superMove.id}`}>
                     {superMove.name}
                   </Link>
                 </li>)

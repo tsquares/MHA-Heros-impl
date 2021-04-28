@@ -16,10 +16,10 @@ const App = () => {
           <Route path="/quotes/:id" exact={true}>
             <QuoteEditorForm/>
           </Route>
-          <Route path={["/super_moves", "/"]} exact={true}>
+          <Route path={["/superMoves", "/"]} exact={true}>
             <SuperMoveList/>
           </Route>
-          <Route path="/super_moves/:id" exact={true}>
+          <Route path="/superMoves/:id" exact={true}>
             <SuperMoveEditorForm/>
           </Route>
         </HashRouter>

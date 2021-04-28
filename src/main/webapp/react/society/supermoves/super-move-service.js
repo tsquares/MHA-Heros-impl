@@ -1,4 +1,4 @@
-const SUPERMOVES_URL = "http://localhost:8080/api/super_moves"
+const SUPERMOVES_URL = "http://localhost:8080/api/superMoves"
 
 // retrieve all super moves from the server
 export const findAllSuperMoves = () =>

@@ -2,7 +2,6 @@ package springtemplate.models;
 
 import java.time.LocalDate;
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "heros")

@@ -44,18 +44,18 @@ const SuperMoveEditorForm = () => {
                 setSuperMove(superMove =>
                     ({...superMove, description: e.target.value}))}
             value={superMove.description}/><br/>
-        <label>Range</label>
+        <label>Effect Area</label>
         <input
             onChange={(e) =>
                 setSuperMove(superMove =>
-                    ({...superMove, range: e.target.value}))}
-            value={superMove.range}/><br/>
-        <label>Usage</label>
+                    ({...superMove, effectArea: e.target.value}))}
+            value={superMove.effectArea}/><br/>
+        <label>Primary Use</label>
         <input
             onChange={(e) =>
                 setSuperMove(superMove =>
-                    ({...superMove, usage: e.target.value}))}
-            value={superMove.usage}/><br/>
+                    ({...superMove, primaryUse: e.target.value}))}
+            value={superMove.primaryUse}/><br/>
         <label>Hero ID</label>
         <input
             onChange={(e) =>
