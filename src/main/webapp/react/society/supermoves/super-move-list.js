@@ -1,30 +1,30 @@
-import quoteService from "./super-move-service"
+import superMoveService from "./super-move-service"
 
 const { useState, useEffect } = React;
 const {Link, useHistory} = window.ReactRouterDOM;
 
 const SuperMoveList = () => {
     const history = useHistory()
-    const [quotes, setQuotes] = useState([])
+    const [superMoves, setSuperMoves] = useState([])
     useEffect(() => {
-        findAllQuotes()
+        findAllSuperMoves()
     }, [])
-  const findAllQuotes = () =>
-      quoteService.findAllQuotes()
-      .then(quotes => setQuotes(quotes))
+  const findAllSuperMoves = () =>
+      superMoveService.findAllSuperMoves()
+      .then(superMoves => setSuperMoves(superMoves))
   return (
       <div>
-        <h2>Quote List</h2>
+        <h2>Super Move List</h2>
         <button className="btn btn-primary"
-                onClick={() => history.push("/quotes/new")}>
-          Add Quote
+                onClick={() => history.push("/super_moves/new")}>
+          Add Super Move
         </button>
         <ul>
           {
-            quotes.map(quote =>
-                <li key={quote.id}>
-                  <Link to={`/quotes/${quote.id}`}>
-                    {quote.text}
+            superMoves.map(superMove =>
+                <li key={superMove.id}>
+                  <Link to={`/super_moves/${superMove.id}`}>
+                    {superMove.name}
                   </Link>
                 </li>)
           }

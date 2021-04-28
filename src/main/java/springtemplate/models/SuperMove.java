@@ -1,6 +1,5 @@
 package springtemplate.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
@@ -13,14 +12,8 @@ public class SuperMove {
   private String description;
   private String range;
   private String usage;
-  
-  @ManyToOne
-  @JsonIgnore
-  private Hero hero;
-  
-  @ManyToOne
-  @JsonIgnore
-  private Quirk quirk;
+  private Integer heroId;
+  private Integer quirkId;
   
   public Integer getId() {
     return id;
@@ -58,17 +51,17 @@ public class SuperMove {
     this.usage = usage;
   }
   
-  public Hero getHero() { return hero; }
+  public Integer getHeroId() { return heroId; }
   
-  public void setHero(Hero hero) {
-    this.hero = hero;
+  public void setHeroId(Integer heroId) {
+    this.heroId = heroId;
   }
   
-  public Quirk getQuirk() {
-    return quirk;
+  public Integer getQuirkId() {
+    return quirkId;
   }
   
-  public void setQuirk(Quirk quirk) {
-    this.quirk = quirk;
+  public void setQuirkId(Integer quirkId) {
+    this.quirkId = quirkId;
   }
 }

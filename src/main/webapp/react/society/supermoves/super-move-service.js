@@ -1,44 +1,44 @@
-const QUOTES_URL = "http://localhost:8080/api/quotes"
+const SUPERMOVES_URL = "http://localhost:8080/api/super_moves"
 
-// retrieve all quotes from the server
-export const findAllQuotes = () =>
-    fetch(QUOTES_URL)
+// retrieve all super moves from the server
+export const findAllSuperMoves = () =>
+    fetch(SUPERMOVES_URL)
     .then(response => response.json())
 
-// retrieve a single quote by their ID
-export const findQuoteById = (id) =>
-    fetch(`${QUOTES_URL}/${id}`)
+// retrieve a single super move by their ID
+export const findSuperMoveById = (id) =>
+    fetch(`${SUPERMOVES_URL}/${id}`)
     .then(response => response.json())
 
-// delete a quote by their ID
-export const deleteQuote = (id) =>
-    fetch(`${QUOTES_URL}/${id}`, {
+// delete a super move by their ID
+export const deleteSuperMove = (id) =>
+    fetch(`${SUPERMOVES_URL}/${id}`, {
       method: "DELETE"
     })
 
-// create a new quote
-export const createQuote = (quote) =>
-    fetch(QUOTES_URL, {
+// create a new super move
+export const createSuperMove = (superMove) =>
+    fetch(SUPERMOVES_URL, {
       method: 'POST',
-      body: JSON.stringify(quote),
+      body: JSON.stringify(superMove),
       headers: {'content-type': 'application/json'}
     })
     .then(response => response.json())
 
-// update a quote by their ID
-export const updateQuote = (id, quote) =>
-    fetch(`${QUOTES_URL}/${id}`, {
+// update a super move by their ID
+export const updateSuperMove = (id, superMove) =>
+    fetch(`${SUPERMOVES_URL}/${id}`, {
       method: 'PUT',
-      body: JSON.stringify(quote),
+      body: JSON.stringify(superMove),
       headers: {'content-type': 'application/json'}
     })
     .then(response => response.json())
 
 // export all functions as the API to this service
 export default {
-  findAllQuotes,
-  findQuoteById,
-  deleteQuote,
-  createQuote,
-  updateQuote
+  findAllSuperMoves,
+  findSuperMoveById,
+  deleteSuperMove,
+  createSuperMove,
+  updateSuperMove
 }

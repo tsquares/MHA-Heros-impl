@@ -44,8 +44,8 @@ public class SuperMoveOrmDao {
     superMove.setDescription(superMoveUpdates.getDescription());
     superMove.setRange(superMoveUpdates.getRange());
     superMove.setUsage(superMoveUpdates.getUsage());
-    superMove.setHero(superMoveUpdates.getHero());
-    superMove.setQuirk(superMoveUpdates.getQuirk());
+    superMove.setHeroId(superMoveUpdates.getHeroId());
+    superMove.setQuirkId(superMoveUpdates.getQuirkId());
     return superMoveRepository.save(superMove);
   }
   
