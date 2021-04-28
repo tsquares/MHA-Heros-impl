@@ -45,7 +45,7 @@ Quote
 ### User to Domain Object Relationships
 User to SuperMove
 * One User can have many SuperMoves
-* SuperMovew cannot exist without a User
+* SuperMove cannot exist without a User
 
 User to Quote
 * One User can have many Quotes
