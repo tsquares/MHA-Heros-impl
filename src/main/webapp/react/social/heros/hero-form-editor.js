@@ -1,75 +1,103 @@
-import userService from "./hero-service"
+import heroService from "./hero-service"
+
 const {useState, useEffect} = React;
 const {useParams, useHistory} = window.ReactRouterDOM;
 const HeroFormEditor = () => {
-        const {id} = useParams()
-        const [user, setUser] = useState({})
-        useEffect(() => {
-          if(id !== "new") {
-            findUserById(id)
-          }
-        }, []);
-        const findUserById = (id) =>
-            userService.findUserById(id)
-            .then(user => setUser(user))
-        const history = useHistory()
-        const deleteUser = (id) =>
-            userService.deleteUser(id)
-            .then(() => history.goBack())
-        const createUser = (user) =>
-            userService.createUser(user)
-            .then(() => history.goBack())
-        const updateUser = (id, newUser) =>
-            userService.updateUser(id, newUser)
-            .then(() => history.goBack())
+  const {id} = useParams()
+  const [hero, setHero] = useState({})
+  useEffect(() => {
+    if (id !== "new") {
+      findHeroById(id)
+    }
+  }, []);
+  const findHeroById = (id) =>
+      heroService.findHeroById(id)
+      .then(hero => setHero(hero))
+  const history = useHistory()
+  const deleteHero = (id) =>
+      heroService.deleteHero(id)
+      .then(() => history.goBack())
+  const createHero = (hero) =>
+      heroService.createHero(hero)
+      .then(() => history.goBack())
+  const updateHero = (id, newHero) =>
+      heroService.updateHero(id, newHero)
+      .then(() => history.goBack())
   return (
-        <div>
-            <h2>User Editor</h2>
-            <label>Id</label>
-            <input value={user.id}/><br/>
-            <label>First Name</label>
-            <input
-                onChange={(e) =>
-                    setUser(user =>
-                        ({...user, firstName: e.target.value}))}
-                value={user.firstName}/><br/>
-            <label>Last Name</label>
-            <input
-                onChange={(e) =>
-                    setUser(user =>
-                        ({...user, lastName: e.target.value}))}
-                value={user.lastName}/><br/>
-            <label>Username</label>
-            <input
-                onChange={(e) =>
-                    setUser(user =>
-                        ({...user, username: e.target.value}))}
-                value={user.username}/><br/>
-            <label>Password</label>
-            <input
-                onChange={(e) =>
-                    setUser(user =>
-                        ({...user, password: e.target.value}))}
-                value={user.password}/><br/>
-            <button className="btn btn-warning"
-                    onClick={() => {
-                            history.goBack()}}>
-              Cancel
-            </button>
-            <button className="btn btn-danger"
-                    onClick={() => deleteUser(user.id)}>
-              Delete
-            </button>
-            <button className="btn btn-success"
-                    onClick={() => createUser(user)}>
-              Create
-            </button>
-            <button className="btn btn-primary"
-                    onClick={() => updateUser(user.id, user)}>
-              Save
-            </button>
-        </div>
-    )
+      <div>
+        <h2>Hero Editor</h2>
+        <label>ID (auto-fill)</label>
+        <input value={hero.id}/><br/>
+        <label>First Name</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, firstName: e.target.value}))}
+            value={hero.firstName}/><br/>
+        <label>Last Name</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, lastName: e.target.value}))}
+            value={hero.lastName}/><br/>
+        <label>Username</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, username: e.target.value}))}
+            value={hero.username}/><br/>
+        <label>Password</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, password: e.target.value}))}
+            value={hero.password}/><br/>
+        <label>Email</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, email: e.target.value}))}
+            value={hero.email}/><br/>
+        <label>Date Of Birth</label>
+        <input
+            type="date"
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, dateOfBirth: e.target.value}))}
+            value={hero.dateOfBirth}/><br/>
+        <label>Blood Type</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, bloodType: e.target.value}))}
+            value={hero.bloodType}/><br/>
+        <label>Affiliation</label>
+        <input
+            onChange={(e) =>
+                setHero(hero =>
+                    ({...hero, affiliation: e.target.value}))}
+            value={hero.affiliation}/><br/>
+        <br/>
+        <button className="btn btn-warning"
+                onClick={() => {
+                  history.goBack()
+                }}>
+          Cancel
+        </button>
+        <button className="btn btn-danger"
+                onClick={() => deleteHero(hero.id)}>
+          Delete
+        </button>
+        <button className="btn btn-success"
+                onClick={() => createHero(hero)}>
+          Create
+        </button>
+        <button className="btn btn-primary"
+                onClick={() => updateHero(hero.id, hero)}>
+          Update
+        </button>
+      </div>
+  )
 }
 
 export default HeroFormEditor

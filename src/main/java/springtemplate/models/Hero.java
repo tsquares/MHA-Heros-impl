@@ -1,5 +1,6 @@
 package springtemplate.models;
 
+import java.time.LocalDate;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,7 +15,7 @@ public class Hero {
   private String username;
   private String password;
   private String email;
-  private Date dateOfBirth;
+  private LocalDate dateOfBirth;
   private String bloodType;
   
   @Enumerated(EnumType.STRING)
@@ -68,11 +69,11 @@ public class Hero {
     this.email = email;
   }
   
-  public Date getDateOfBirth() {
+  public LocalDate getDateOfBirth() {
     return dateOfBirth;
   }
   
-  public void setDateOfBirth(Date dateOfBirth) {
+  public void setDateOfBirth(LocalDate dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
   
@@ -93,7 +94,7 @@ public class Hero {
   }
   
   public Hero(String firstName, String lastName, String username, String password,
-      String email, Date dateOfBirth, String bloodType, Affiliation affiliation) {
+      String email, LocalDate dateOfBirth, String bloodType, Affiliation affiliation) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.username = username;
