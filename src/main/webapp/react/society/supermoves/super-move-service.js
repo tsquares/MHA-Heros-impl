@@ -10,6 +10,10 @@ export const findSuperMoveById = (id) =>
     fetch(`${SUPERMOVES_URL}/${id}`)
     .then(response => response.json())
 
+export const findSuperMoveByHeroId = (hid) =>
+    fetch(`${SUPERMOVES_URL}/h${hid}`)
+    .then(response => response.json())
+
 // delete a super move by their ID
 export const deleteSuperMove = (id) =>
     fetch(`${SUPERMOVES_URL}/${id}`, {
@@ -40,5 +44,6 @@ export default {
   findSuperMoveById,
   deleteSuperMove,
   createSuperMove,
-  updateSuperMove
+  updateSuperMove,
+  findSuperMoveByHeroId
 }

@@ -26,6 +26,7 @@ const HeroFormEditor = () => {
   return (
       <div>
         <h2>Hero Editor</h2>
+        <p><a href = "http://localhost:63342/spring-template/src/main/webapp/react/society/index.html?_ijt=su95pq22sep5d2nf75b27maf9m#/"><b>Super Moves</b> and <b>Quotes</b> Lists</a></p>
         <label>ID (auto-fill)</label>
         <input value={hero.id}/><br/>
         <label>First Name</label>

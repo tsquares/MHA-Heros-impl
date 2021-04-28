@@ -35,7 +35,7 @@ CREATE TABLE `heros` (
   PRIMARY KEY (`id`),
   KEY `heros_to_affiliation_idx` (`affiliation`),
   CONSTRAINT `heros_to_affiliation` FOREIGN KEY (`affiliation`) REFERENCES `affiliations` (`affiliation`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `heros` (
 
 LOCK TABLES `heros` WRITE;
 /*!40000 ALTER TABLE `heros` DISABLE KEYS */;
-INSERT INTO `heros` VALUES (1,'Toshinori','Yagi','All Might','All Might',NULL,'9999-06-10','A','U.A. HIGH SCHOOL'),(2,'Izuku','Midoriya','Deku','i<3a11might',NULL,'9999-07-15','O','U.A. HIGH SCHOOL'),(3,'Katsuki','Bakugo','Great Explosion Murder God Dynamight',NULL,NULL,'9999-04-20','A','U.A. HIGH SCHOOL'),(4,'Shoto','Todoroki','Shoto','daddyissues123',NULL,'9999-01-11','O','U.A. HIGH SCHOOL'),(5,'Mirio','Togata','Lemillion','lucas',NULL,'9999-07-15','O','U.A. HIGH SCHOOL'),(6,'Nejire','Hado','Nejire Chan','Nejire Chan',NULL,'9999-10-06','B','U.A. HIGH SCHOOL'),(7,'Tamaki','Amajiki','Suneater',NULL,NULL,'9999-03-04','AB','U.A. HIGH SCHOOL'),(8,'Emi','Fukukado','Ms. Joke','Smile Hero',NULL,'9999-02-05',NULL,'KETSUBUTSU ACADEMY'),(9,'Tatami','Nakagame','Turtle Neck',NULL,NULL,'9999-01-23','A','KETSUBUTSU ACADEMY'),(10,'Yo','Shindo','Grand','Grand',NULL,'9999-05-13','AB','KETSUBUTSU ACADEMY'),(11,'Inasa','Yoarashi','Gale Force','Gale Force',NULL,'9999-09-26','B','SHIKETSU HIGH SCHOOL'),(12,'Kemyi','Utsushimi','Maboromicamie',NULL,NULL,'9999-08-15','O','SHIKETSU HIGH SCHOOL'),(13,'Nagamasa','Mora','Chewyee','Chewyee',NULL,'9999-11-13','O','SHIKETSU HIGH SCHOOL'),(14,'Seiji','Shishikura','Sisicross',NULL,NULL,'9999-02-09','A','SHIKETSU HIGH SCHOOL'),(15,'Shino','Sosaki','Mandalay',NULL,NULL,'9999-05-01','A','HERO ASSOCIATION'),(16,'Ryuko','Tsuchikawa','Pixie-Bob',NULL,NULL,'9999-06-26','AB','HERO ASSOCIATION'),(17,'Tomoko','Shiretoko','Ragdoll',NULL,NULL,'9999-04-08','O','HERO ASSOCIATION'),(18,'Yawara','Chatora','Tiger',NULL,NULL,'1984-02-29','A','HERO ASSOCIATION'),(19,'Tsuyu','Asui','Froppy','kerokero',NULL,'9999-02-12','A','U.A. HIGH SCHOOL');
+INSERT INTO `heros` VALUES (1,'Toshinori','Yagi','All Might','All Might',NULL,'9999-06-10','A','UA_HIGH_SCHOOL'),(2,'Izuku','Midoriya','Deku','i<3a11might',NULL,'9999-07-15','O','UA_HIGH_SCHOOL'),(3,'Katsuki','Bakugo','Great Explosion Murder God Dynamight',NULL,NULL,'9999-04-20','A','UA_HIGH_SCHOOL'),(4,'Shoto','Todoroki','Shoto','daddyissues123',NULL,'9999-01-11','O','UA_HIGH_SCHOOL'),(5,'Mirio','Togata','Lemillion','lucas',NULL,'9999-07-15','O','UA_HIGH_SCHOOL'),(6,'Nejire','Hado','Nejire Chan','Nejire Chan',NULL,'9999-10-06','B','UA_HIGH_SCHOOL'),(7,'Tamaki','Amajiki','Suneater',NULL,NULL,'9999-03-04','AB','UA_HIGH_SCHOOL'),(8,'Emi','Fukukado','Ms. Joke','Smile Hero',NULL,'9999-02-05',NULL,'KETSUBUTSU_ACADEMY'),(9,'Tatami','Nakagame','Turtle Neck',NULL,NULL,'9999-01-23','A','KETSUBUTSU_ACADEMY'),(10,'Yo','Shindo','Grand','Grand',NULL,'9999-05-13','AB','KETSUBUTSU_ACADEMY'),(11,'Inasa','Yoarashi','Gale Force','Gale Force',NULL,'9999-09-26','B','SHIKETSU_HIGH_SCHOOL'),(12,'Kemyi','Utsushimi','Maboromicamie',NULL,NULL,'9999-08-15','O','SHIKETSU_HIGH_SCHOOL'),(13,'Nagamasa','Mora','Chewyee','Chewyee',NULL,'9999-11-13','O','SHIKETSU_HIGH_SCHOOL'),(14,'Seiji','Shishikura','Sisicross',NULL,NULL,'9999-02-09','A','SHIKETSU_HIGH_SCHOOL'),(15,'Shino','Sosaki','Mandalay',NULL,NULL,'9999-05-01','A','HERO_ASSOCIATION'),(16,'Ryuko','Tsuchikawa','Pixie-Bob',NULL,NULL,'9999-06-26','AB','HERO_ASSOCIATION'),(17,'Tomoko','Shiretoko','Ragdoll',NULL,NULL,'9999-04-08','O','HERO_ASSOCIATION'),(18,'Yawara','Chatora','Tiger',NULL,NULL,'1984-02-29','A','HERO_ASSOCIATION'),(19,'Tsuyu','Asui','Froppy','kerokero',NULL,'9999-02-12','A','UA_HIGH_SCHOOL');
 /*!40000 ALTER TABLE `heros` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-19 20:57:59
+-- Dump completed on 2021-04-28  3:08:31

@@ -26,8 +26,8 @@ CREATE TABLE `super_moves` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `description` varchar(140) DEFAULT NULL,
-  `range` varchar(45) DEFAULT NULL,
-  `usage` varchar(45) DEFAULT NULL,
+  `effect_area` varchar(45) DEFAULT NULL,
+  `primary_use` varchar(45) DEFAULT NULL,
   `hero_id` int DEFAULT NULL,
   `quirk_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -35,7 +35,7 @@ CREATE TABLE `super_moves` (
   KEY `super_moves_to_quirk_idx` (`quirk_id`),
   CONSTRAINT `super_moves_to_hero` FOREIGN KEY (`hero_id`) REFERENCES `heros` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `super_moves_to_quirk` FOREIGN KEY (`quirk_id`) REFERENCES `quirks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `super_moves` (
 
 LOCK TABLES `super_moves` WRITE;
 /*!40000 ALTER TABLE `super_moves` DISABLE KEYS */;
-INSERT INTO `super_moves` VALUES (1,'Detroit Smash','simple punch focusing One For All\'s stockpiling power into the fist','close','offense',1,1),(2,'United States of Smash','a smash attack that concentrates all of One For All\'s remaining power into All Might\'s fist','close','offense',1,1),(3,'Delaware Smash','Izuku uses One For All at full power and flicks his fingers to create powerful shockwaves','medium','offense',2,1),(4,'Texas Smash','a right punch with enough force that the wind pressure sends anything made of liquid flying away','close','offense',1,1),(5,'Tremoring Earth','After two small pulses of energy, the ground surrounding him shakes and breaks apart, similar to an earthquake','long','multi-target offense',10,NULL),(6,'Blinder Touch Eyeball Crush','While phasing through an incoming attack, Mirio fakes going for his opponent\'s eyes with his fingers','close','distraction',5,NULL),(7,'Flashfire Fist','condenses Endeavor\'s flames into a white-hot point and is meant to act as a one-hit finisher','medium','power up',NULL,6),(8,'Prominence Burn','Endeavor uses the full might of his flames to emit a concentrated beam of heat from his body that is used to vaporize his target','multi','offense',NULL,6);
+INSERT INTO `super_moves` VALUES (1,'Detroit Smash','simple punch focusing One For All\'s stockpiling power into the fist','close','offense',1,1),(2,'United States of Smash','a smash attack that concentrates all of One For All\'s remaining power into All Might\'s fist','close','offense',1,1),(3,'Delaware Smash','Izuku uses One For All at full power and flicks his fingers to create powerful shockwaves','medium','offense',2,1),(4,'Texas Smash','a right punch with enough force that the wind pressure sends anything made of liquid flying away','close','offense',1,1),(5,'Tremoring Earth','After two small pulses of energy, the ground surrounding him shakes and breaks apart, similar to an earthquake','long','multi-target offense',10,NULL),(6,'Blinder Touch Eyeball Crush','While phasing through an incoming attack, Mirio fakes going for his opponent\'s eyes with his fingers','close','distraction',5,NULL),(7,'Flashfire Fist','condenses Endeavor\'s flames into a white-hot point and is meant to act as a one-hit finisher','medium','power up',NULL,6);
 /*!40000 ALTER TABLE `super_moves` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-19 20:57:59
+-- Dump completed on 2021-04-28  3:08:31

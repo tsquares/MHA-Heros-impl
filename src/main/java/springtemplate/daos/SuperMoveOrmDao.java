@@ -35,6 +35,12 @@ public class SuperMoveOrmDao {
     return superMoveRepository.findById(id).get();
   }
   
+  @GetMapping("/api/superMoves/h{heroId}")
+  public SuperMove findSuperMoveByHeroId(
+      @PathVariable("heroId") Integer hid) {
+    return superMoveRepository.findSuperMoveByHeroId(hid);
+  }
+  
   @PutMapping("/api/superMoves/{superMoveId}")
   public SuperMove updateSuperMove(
       @PathVariable("superMoveId") Integer id,

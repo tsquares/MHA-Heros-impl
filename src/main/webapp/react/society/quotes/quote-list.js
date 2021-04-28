@@ -23,6 +23,7 @@ const QuoteList = () => {
           {
             quotes.map(quote =>
                 <li key={quote.id}>
+                  Hero ID {quote.heroId}:
                   <Link to={`/quotes/${quote.id}`}>
                     {quote.text}
                   </Link>
