@@ -1,6 +1,5 @@
 package springtemplate.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
@@ -12,10 +11,7 @@ public class Quote {
   private String text;
   private Boolean favorite;
   private Integer upvotes;
-  
-  @ManyToOne
-  @JsonIgnore
-  private Hero hero;
+  private Integer heroId;
   
   public Integer getId() {
     return id;
@@ -49,11 +45,11 @@ public class Quote {
     this.upvotes = upvotes;
   }
   
-  public Hero getHero() {
-    return hero;
+  public Integer getHeroId() {
+    return heroId;
   }
   
-  public void setHero(Hero hero) {
-    this.hero = hero;
+  public void setHeroId(Integer heroId) {
+    this.heroId = heroId;
   }
 }

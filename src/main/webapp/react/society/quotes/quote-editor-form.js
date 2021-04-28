@@ -1,9 +1,9 @@
-import quoteService from "./super-move-service"
+import quoteService from "./quote-service"
 
 const {useState, useEffect} = React
 const {useParams, useHistory} = window.ReactRouterDOM;
 
-const SuperMoveEditorForm = () => {
+const QuoteEditorForm = () => {
   const [quote, setQuote] = useState({})
   const {id} = useParams()
   const history = useHistory()
@@ -79,4 +79,4 @@ const SuperMoveEditorForm = () => {
   )
 }
 
-export default SuperMoveEditorForm
+export default QuoteEditorForm

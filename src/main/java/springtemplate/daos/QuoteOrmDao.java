@@ -43,7 +43,7 @@ public class QuoteOrmDao {
     quote.setText(quoteUpdates.getText());
     quote.setFavorite(quoteUpdates.getFavorite());
     quote.setUpvotes(quoteUpdates.getUpvotes());
-    quote.setHero(quoteUpdates.getHero());
+    quote.setHeroId(quoteUpdates.getHeroId());
     return quoteRepository.save(quote);
   }
   
