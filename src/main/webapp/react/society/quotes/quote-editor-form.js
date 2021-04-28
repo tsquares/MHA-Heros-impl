@@ -30,6 +30,7 @@ const QuoteEditorForm = () => {
         <h2>
           Quote Editor
         </h2>
+        <p><a href = {`http://localhost:63342/spring-template/src/main/webapp/react/social/index.html?_ijt=mnbjji76o9j7ug2jhunog4qqo9#/heros/${quote.heroId}`}>Hero</a></p>
         <label>ID (auto-fill)</label>
         <input value={quote.id}/><br/>
         <label>Text</label>
