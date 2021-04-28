@@ -5,7 +5,7 @@ CS3200 db design final project
 * Jacqueline Tam - CS3200 33620 Database Design SEC 03 Spring 2021
 * Tara Tam - CS3200 33620 Database Design SEC 03 Spring 2021
 
-### P3
+### (P3 FINAL PROJECT)
 ## Problem statement
 Which superheroes are most popular? The amount of super-powered vigilantes appearing is ever increasing. We seek to track and monitor the heroes who are helping to save lives and work with local authorities.
 
@@ -21,7 +21,7 @@ The typical users of the database are heroes themselves. They provide personal i
 * Quote
   * A quote is something said by a user in the database. Quotes have text, a number of likes, and can be favorited. One user can have many quotes, but quotes cannot exist without a user.
 
-
+### (P1 DATABASE DESIGN AND IMPLEMENTATION)
 ## Project Description
 Database of users representing Heros from the manga/anime My Hero Academia. Heros may or may not have a superpower called a Quirk. Quirks can be used by heros to perform a special technique called a SuperMove. Heros may also have quotes.
 
