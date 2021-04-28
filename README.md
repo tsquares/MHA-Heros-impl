@@ -34,7 +34,7 @@ Hero
 
 ### Domain Object Data Models
 SuperMove
-* special ability names with description, effective range of the move (i.e. close, medium, long, etc.), and overall usage type (i.e. offensive, defensive, etc.)
+* special ability names with description, effective area of the move (i.e. close, medium, long, etc.), and primary usage type (i.e. offensive, defensive, etc.)
 
 Quirk
 * a super power that has a name, power type, and description of the power
