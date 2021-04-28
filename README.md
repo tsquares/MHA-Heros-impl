@@ -62,7 +62,7 @@ Quirk to SuperMove
 
 ### Portable Enumeration(s)
 Affiliation
-* "U.A. HIGH SCHOOL"
+* "UA HIGH SCHOOL"
 * "SHIKETSU HIGH SCHOOL"
 * "KETSUBUTSU ACADEMY"
 * "HERO ASSOCIATION"
