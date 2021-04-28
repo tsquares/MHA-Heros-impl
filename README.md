@@ -5,9 +5,7 @@ CS3200 db design final project
 * Jacqueline Tam - CS3200 33620 Database Design SEC 03 Spring 2021
 * Tara Tam - CS3200 33620 Database Design SEC 03 Spring 2021
 
-## Project Description
-Database of users representing Heros from the manga/anime My Hero Academia. Heros may or may not have a superpower called a Quirk. Quirks can be used by heros to perform a special technique called a SuperMove. Heros may also have quotes.
-
+### P3
 ## Problem statement
 Which superheroes are most popular? The amount of super-powered vigilantes appearing is ever increasing. We seek to track and monitor the heroes who are helping to save lives and work with local authorities.
 
@@ -16,6 +14,16 @@ This database serves as a registry of heroes and their capabilities. In addition
 
 ## User
 The typical users of the database are heroes themselves. They provide personal information such as their name, username (alias), email address, date of birth, and blood type. They are also able to register their super moves associated with them and their super ability (quirk).
+
+## Domain objects
+* Quirk
+  * A quirk is a super power unique to a user. Quirks have a name, type, and description. There is a many to many relationship between users and quirks. A quirk cannot exist without a user.
+* Quote
+  * A quote is something said by a user in the database. Quotes have text, a number of likes, and can be favorited. One user can have many quotes, but quotes cannot exist without a user.
+
+
+## Project Description
+Database of users representing Heros from the manga/anime My Hero Academia. Heros may or may not have a superpower called a Quirk. Quirks can be used by heros to perform a special technique called a SuperMove. Heros may also have quotes.
 
 ### UML Class Diagram
 [UML pdf](db_design_final_project_UML.pdf)
